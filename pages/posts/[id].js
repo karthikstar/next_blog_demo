@@ -27,7 +27,12 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+} //If fallback is false, then any paths not returned by getStaticPaths will result in a 404 page.
+
+
+
+// Like getStaticProps, getStaticPaths can fetch data from any data source. 
+// In our example, getAllPostIds (which is used by getStaticPaths) may fetch from an external API endpoint:
 
 export default function Post({ postData }) {
     return (
